@@ -54,6 +54,7 @@ def spam():
 
 
 if __name__ == '__main__':
+    logging.basicConfig(level=logging.DEBUG)
     print(add(3, 4))
     spam()
 
