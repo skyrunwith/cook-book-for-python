@@ -93,4 +93,4 @@ if __name__ == '__main__':
 
     # Change the log level
     add.set_level(logging.WARNING)
-    add(2, 3)  # WARNING:__main__:Add called
+    add(3, 4)  # WARNING:__main__:Add called
