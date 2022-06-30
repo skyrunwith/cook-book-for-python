@@ -13,6 +13,7 @@ Solution
     values(): not support set operations.
         the items contained in a values view aren't guaranteed to be unique.
 Discussion
+    dictionaries comprehension.
 """
 
 __author__ = 'Frankie Fu'

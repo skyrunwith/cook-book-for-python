@@ -11,7 +11,9 @@ Discussion
     If you are looking for the N smallest or largest items and N is small compared to
     the overall size of the collection, these functions provide superior performance.
 
-    nlargest() and nsmallest() is adaptive in how it operates and will carry out of some of thest
+    If N = 1, it's faster to use min() or max().
+    if N is about the same size as the collection itself, it is usually faster to sort if first and take a slice.
+    ** nlargest() and nsmallest() is adaptive in how it operates and will carry out of some of these
     optimizations on your behalf.
         min, max, sored(item)[:N]
 """

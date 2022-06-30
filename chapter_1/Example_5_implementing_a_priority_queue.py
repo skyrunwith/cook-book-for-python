@@ -8,8 +8,8 @@ Problem
 Solution
     uses the 'heapq' module to implement a simple priority queue.
 Discussion
-    The core of this recipe concerns the use of the heapq module. The functions heapq.heappush()
-    and heapq.heappop() insert and remove items from a list _queue in a way such that
+    The core of this recipe concerns the use of the heapq module. The functions "heapq.heappush()"
+    and "heapq.heappop()" insert and remove items from a list _queue in a way such that
     the first item in the list has the smallest priority. The heappop() method always
     returns the "smallest" item, so that the key to making the queue pop the correct items.
     Moreover, since the push and pop operations have O(logN) complexity where N is the

@@ -8,7 +8,7 @@ Problem
 Solution
     Keeping a limited history is a perfect us for a 'collections.deque'.
 Discussion
-    yield.
+    yield + deque.
     Using deque(maxlen=N) creates a fixed-size queue. When new items are added and
     the queue is full, the oldest item is automatically removed.
 
@@ -39,6 +39,7 @@ if __name__=='__main__':
         for line, prevlines in search(f, 'Python', 5):
             for pline in prevlines:
                 print(pline, end='')
+            print('*' * 20, 'new line: ')
             print(line, end='')
             print('-'*20)
 
