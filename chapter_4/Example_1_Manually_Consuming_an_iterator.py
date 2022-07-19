@@ -2,11 +2,12 @@
 # -*- coding: utf-8 -*-
 
 """
-if you can't and don't want use a for loop, you need to process items in an iterable.
-
-1. use next function(), catch StopIteration and exception
-2. return a terminating value
-3. precise control over underlying iteration
+Problem
+    if you can't and don't want use a for loop, you need to process items in an iterable.
+Solution
+    1. use next function(), catch StopIteration and exception
+    2. return a terminating value
+    3. precise control over underlying iteration
 """
 
 __author__ = 'Frankie Fu'
