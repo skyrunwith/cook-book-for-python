@@ -10,4 +10,9 @@ __author__ = 'Frankie Fu'
 3. format() function.
 4. Working with binary, octal, hexadecimal integers:
     bin(), oct(), hex(), format(number, ['b'|'o'|'x']?), int(str, base) 
+5. Packing and unpacking large integers from bytes
+    int.from_bytes()
+    int.to_bytes()
+    int.big_length()
+    struct module.
 """
