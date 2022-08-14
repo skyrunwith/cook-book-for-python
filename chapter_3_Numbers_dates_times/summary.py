@@ -29,4 +29,8 @@ __author__ = 'Frankie Fu'
     fraction module.
 9. Calculating with large arrays.
     numpy module.
+10. Performing matrix and linear algebra calculations
+    np.matrix()
+    m.T, m.I
+    np.linalg
 """
