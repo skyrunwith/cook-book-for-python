@@ -25,4 +25,6 @@ __author__ = 'Frankie Fu'
     3. inf and 和正常数字计算，都会产生inf, inf/inf == 0.0
        nan 与任何数计算都为 nan
        inf + inf == nan
+8. Calculating with fractions
+    fraction module.
 """
