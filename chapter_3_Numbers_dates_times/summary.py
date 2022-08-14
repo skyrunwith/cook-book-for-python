@@ -27,4 +27,6 @@ __author__ = 'Frankie Fu'
        inf + inf == nan
 8. Calculating with fractions
     fraction module.
+9. Calculating with large arrays.
+    numpy module.
 """
