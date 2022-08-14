@@ -46,4 +46,7 @@ __author__ = 'Frankie Fu'
         timedelta: days, seconds, total_seconds()
         datetime is aware of leap year.
     dateutil module.
+13. Determining last friday's date
+    custom get_previous_byday() function.
+    dateuti.relativedelta.
 """
