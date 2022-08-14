@@ -33,4 +33,12 @@ __author__ = 'Frankie Fu'
     np.matrix()
     m.T, m.I
     np.linalg
+11. Picking thing at random
+    random.choice(): pick a random item out of a sequence.
+    random.sample(): To take a sampling of N items where selected items are removed from further consideration.
+    random.shuffle(): If you simply want to shuffle items in a sequence in place.
+    random.randint(): To produce random integers.
+    random.random(): To produce uniform floating-point values in the range 0 to 1.
+    random.getrandbits(): To get N random-bits expressed as an integer.
+    random.seed(): alter the initial seed.
 """
