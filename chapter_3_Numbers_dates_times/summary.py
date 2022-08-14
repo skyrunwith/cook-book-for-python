@@ -41,4 +41,9 @@ __author__ = 'Frankie Fu'
     random.random(): To produce uniform floating-point values in the range 0 to 1.
     random.getrandbits(): To get N random-bits expressed as an integer.
     random.seed(): alter the initial seed.
+12. Converting days to seconds and other basic time conversions.
+     datetime module:
+        timedelta: days, seconds, total_seconds()
+        datetime is aware of leap year.
+    dateutil module.
 """
