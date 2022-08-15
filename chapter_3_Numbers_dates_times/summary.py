@@ -52,4 +52,10 @@ __author__ = 'Frankie Fu'
 14. Finding the date range for the current month
     datetime.timedelta()
     calendar.monthrange()
+15. Converting strings into datetimes.
+    datetime.strptime()
+    datetime.strftime()
+    faster solution:
+        If you are parsing a lot of dates in your code and you know the precise format, you will probably
+        format, you will probably get much 'better performance' by cooking up a custom solution instead.
 """
