@@ -49,4 +49,7 @@ __author__ = 'Frankie Fu'
 13. Determining last friday's date
     custom get_previous_byday() function.
     dateuti.relativedelta.
+14. Finding the date range for the current month
+    datetime.timedelta()
+    calendar.monthrange()
 """
