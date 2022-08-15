@@ -5,9 +5,10 @@
 
 __author__ = 'Frankie Fu'
 """
-1. round() function.
-2. decimal module.
-3. format() function.
+1. round() function: round a floating-point number to a fixed number of decimal places
+2. decimal module: accurate calculations with decimal numbers
+3. format() function: general form: '[<>^]'?width[,]?(.digits)?'
+    works with floating-point type and decimal numbers.
 4. Working with binary, octal, hexadecimal integers:
     bin(), oct(), hex(), format(number, ['b'|'o'|'x']?), int(str, base) 
 5. Packing and unpacking large integers from bytes
