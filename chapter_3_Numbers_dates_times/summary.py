@@ -58,4 +58,9 @@ __author__ = 'Frankie Fu'
     faster solution:
         If you are parsing a lot of dates in your code and you know the precise format, you will probably
         format, you will probably get much 'better performance' by cooking up a custom solution instead.
+16. Manipulating dates involving time zones.
+    timezone.localize(datetime)
+    datetime.astimezone(timezone)
+    
+    advice using UTC dates.
 """
