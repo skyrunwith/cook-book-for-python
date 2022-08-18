@@ -28,7 +28,7 @@ class Node:
         self._children.append(child)
 
     def __iter__(self):
-        return iter(self._children) # iterable protocol forwards to the internally held _children attribute
+        return iter(self._children)  # simply forwards to the internally held _children attribute
 
 
 if __name__ == '__main__':

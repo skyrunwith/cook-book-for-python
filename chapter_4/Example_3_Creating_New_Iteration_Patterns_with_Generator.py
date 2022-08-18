@@ -8,7 +8,7 @@ Problem
 Solution
     1. using a generator function.
 Discussion
-    1. mere presence of the yield statement in a function turns it into a generator.
+    1. mere presence of the 'yield' statement in a function turns it into a generator.
     2. a generator only runs in response to iteration.
     3. the key feature is that a generator function only run in response to "next" operations carried out in iteration.
 """
