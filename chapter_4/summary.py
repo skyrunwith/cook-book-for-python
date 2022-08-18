@@ -82,4 +82,7 @@ __author__ = 'Frankie Fu'
     zip_longest()
     dict(zip())
     list(zip())
+4.12 Iterating on Items in Separate Containers.
+    itertools.chain()
+
 """
