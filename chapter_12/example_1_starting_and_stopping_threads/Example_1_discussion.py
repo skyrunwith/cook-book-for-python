@@ -38,7 +38,7 @@ class CountDownThread(Thread):
 
 #
 import multiprocessing
-from chapter_12.example_1.terminate_threads import CountdownTask
+from chapter_12.example_1_starting_and_stopping_threads.terminate_threads import CountdownTask
 
 # c = CountdownTask()
 # p = multiprocessing.Process(target=c.run, args=(5,))
