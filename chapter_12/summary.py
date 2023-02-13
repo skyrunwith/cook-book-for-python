@@ -26,4 +26,11 @@ __author__ = 'Frankie Fu'
         (e.g., waiting for I/O, waiting for results from a database, etc.)
     Inherit from `Thread` class:
         缺点：只能在`threads`的上下文中使用，不能移植到`multiprocess`中.
+12. Determining if a thread has started.
+    Event Object: used for `ont-time` events
+        Event.set(), Event.wait(), Event.clear(), Event.is_set()
+    Condition Object: used for repeatedly on an event over and over
+        Condition.acquire(), .release(), .wait(), .wait_for(), .notify(), .notify_all(), 
+    Semaphore Object: used for wake up one waiting thread.
+        Semaphore.acquire(), Semaphore.release().
 """
