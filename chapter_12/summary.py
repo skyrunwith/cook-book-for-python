@@ -41,4 +41,7 @@ __author__ = 'Frankie Fu'
     Use `queue` with `Event` to implement consumer to notify producer.
     Queue with immutable data structures, `deepcopy item`
     Queue block and timeout.
+12.4 Locking critical sections.
+    Use Lock: function or methods or class level lock.
+    RLock and Semaphore.
 """
