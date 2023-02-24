@@ -46,4 +46,6 @@ __author__ = 'Frankie Fu'
     RLock and Semaphore.
 12.5 Locking with deadlock avoidance
     If need to ues more locks at a time, Use contextmanager implement ascending locks.
+12.6 Storing Thead-Specific state
+    threading.local()
 """
