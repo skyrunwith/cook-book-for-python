@@ -44,4 +44,6 @@ __author__ = 'Frankie Fu'
 12.4 Locking critical sections.
     Use Lock: function or methods or class level lock.
     RLock and Semaphore.
+12.5 Locking with deadlock avoidance
+    If need to ues more locks at a time, Use contextmanager implement ascending locks.
 """
