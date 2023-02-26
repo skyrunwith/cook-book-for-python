@@ -52,4 +52,7 @@ __author__ = 'Frankie Fu'
     concurrent.futures library's ThreadExecutorPool
     pool.submit().result()
     threading.stack_size: limit virtual memory size.
+12.8 Performing simple parallel programming
+    Cpu-intensive tasks.
+    `ProcessPoolExecutor`
 """
