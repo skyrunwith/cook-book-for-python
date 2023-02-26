@@ -48,4 +48,8 @@ __author__ = 'Frankie Fu'
     If need to ues more locks at a time, Use contextmanager implement ascending locks.
 12.6 Storing Thead-Specific state
     threading.local()
+12.7 Create a thread pool:
+    concurrent.futures library's ThreadExecutorPool
+    pool.submit().result()
+    threading.stack_size: limit virtual memory size.
 """
