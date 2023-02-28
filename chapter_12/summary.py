@@ -55,4 +55,9 @@ __author__ = 'Frankie Fu'
 12.8 Performing simple parallel programming
     Cpu-intensive tasks.
     `ProcessPoolExecutor`
+12.9 Dealing with the GIL(How to stop worrying about it)
+     GIL仅仅影响CPU密集型任务，I/O密集型很少影响，I/O密集型任务就算建几千个线程也影响很小。
+     Two strategies for working around the limitations of the GIL.
+     1. use `multiprocessing` module to create a process pool and use it like coprocessor.
+     2. C extension programming. such as `ctypes` library
 """
