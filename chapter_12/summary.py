@@ -60,4 +60,8 @@ __author__ = 'Frankie Fu'
      Two strategies for working around the limitations of the GIL.
      1. use `multiprocessing` module to create a process pool and use it like coprocessor.
      2. C extension programming. such as `ctypes` library
+12.10 Defining an actor task
+    You'd like to define tasks with behavior similar to "actors" in the so-called "actor model".
+    The "Actor model" is one of the oldest and most simple approaches to concurrency and distributed computing.
+    "A Thread and A Queue" and a `send` method.s
 """
