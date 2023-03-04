@@ -64,4 +64,16 @@ __author__ = 'Frankie Fu'
     You'd like to define tasks with behavior similar to "actors" in the so-called "actor model".
     The "Actor model" is one of the oldest and most simple approaches to concurrency and distributed computing.
     "A Thread and A Queue" and a `send` method.s
+    
+12.11 Implementing Publish/Subscribe Message
+    A separate `exchange` or `gateway` object that acts as an intermediary for all messages.
+    A message send to `the exchange` and it delivers to one or more attached tasks.
+    
+    一般线程通信是用queue，但是pub/sub也有很多优点：
+    First, Only worry about connecting them to a known `exchange`, decouple variety tasks, sucha as `logging` lib.
+    Second, `Broadcast message` to multiple subscribers opens up new communication pattern.
+    Next, it works with a variety of `task-like` object
+    Next, use context-management protocol.
+    Finally, there are numerous possible extensions to exchange idea.(Distributed computing system, routing
+    message to task on different machine.)
 """
