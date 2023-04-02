@@ -18,4 +18,19 @@ __author__ = 'Frankie Fu'
         resp.text(the Unicode decoded text from a request)
         reps.content(the raw binary response content)
         reps.json(the response content interpreted as JSON)  
+        
+12. Creating TCP Server
+    You want to implement server that communicates with clients using TCP internet protocol.
+    
+    `socketserver` lib :
+        a handler method class:
+            BaseRequestHandler, StreamRequestHandler.
+        server:
+            TCPServer, ThreadingTCPServer, ForkingTCPServer
+        a pre-allocated pool of worker threads and process with nonthreaded server.
+            Thread(target=server.serve_forever)
+    `socket` lib to implement server.
+        
+    
+    
 """
