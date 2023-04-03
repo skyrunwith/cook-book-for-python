@@ -19,7 +19,7 @@ __author__ = 'Frankie Fu'
         reps.content(the raw binary response content)
         reps.json(the response content interpreted as JSON)  
         
-12. Creating TCP Server
+12. Creating TCP Server (A reliable connection)
     You want to implement server that communicates with clients using TCP internet protocol.
     
     `socketserver` lib :
@@ -30,7 +30,25 @@ __author__ = 'Frankie Fu'
         a pre-allocated pool of worker threads and process with nonthreaded server.
             Thread(target=server.serve_forever)
     `socket` lib to implement server.
-        
+        methods:
+            server: 
+                __init__, bind, listen
+                accept, recv, send
+            client:
+                __init__, connect, send, recv
+                
+13. Creating UDP Server(A unreliable connection)
+    you want to implement server that communicates with clients using UDP internet protocol.
     
-    
+    `socketserver` lib:
+    a handler method class:
+        BaseRequestHandler, StreamRequestHandler.
+        server:
+            UDPServer, ThreadingUDPServer, ForkingUDPServer
+    `socket` lib to implement UDP server.
+        server:
+            __init__, bind
+            recvfrom, sendto
+        client:
+            __init__, sendto, recvfrom
 """
