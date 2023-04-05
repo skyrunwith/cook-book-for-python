@@ -19,7 +19,7 @@ __author__ = 'Frankie Fu'
         reps.content(the raw binary response content)
         reps.json(the response content interpreted as JSON)  
         
-12. Creating TCP Server (A reliable connection)
+11.2. Creating TCP Server (A reliable connection)
     You want to implement server that communicates with clients using TCP internet protocol.
     
     `socketserver` lib :
@@ -37,7 +37,7 @@ __author__ = 'Frankie Fu'
             client:
                 __init__, connect, send, recv
                 
-13. Creating UDP Server(A unreliable connection)
+11.3. Creating UDP Server(A unreliable connection)
     you want to implement server that communicates with clients using UDP internet protocol.
     
     `socketserver` lib:
@@ -51,4 +51,26 @@ __author__ = 'Frankie Fu'
             recvfrom, sendto
         client:
             __init__, sendto, recvfrom
+11.5 Create a simple REST-Based server.
+    you want to be able to interact with your programs over the network using a simple
+    REST-Based interface. However, you don't want to do it by installing a full-fledged 
+    web programming framework.
+    
+    create a tiny library based on `WSGI` standard.
+    
+    Define wsgi application:
+        function: 
+            wsgi(environ, start_response)
+        class:
+            __init__(self):
+                self.pathmap={} #  a dictionary that mappings(method, path) pairs to handler function.
+            __call__(self):
+                ...
+        
+    requirements:
+        the returned result must be encoded into byte strings.
+        
+    create a simple server.
+        from wsgiref.simple_server import make_server
+    make serer create the underlying socket server.
 """
