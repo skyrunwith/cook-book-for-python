@@ -73,4 +73,12 @@ __author__ = 'Frankie Fu'
     create a simple server.
         from wsgiref.simple_server import make_server
     make serer create the underlying socket server.
+    
+11.6 Implementing a simple remote procedure with XML-RPC
+    You want an easy way to execute functions and methods in Python program running on remote machines.
+    
+    1.create a server instance(SimpleXMLRPCServer)
+    2.use `register_function`
+    3.launch it with serve_forever() method
+    4.client access the service: create a ServerProxy instance
 """
