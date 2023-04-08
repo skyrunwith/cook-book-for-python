@@ -81,4 +81,16 @@ __author__ = 'Frankie Fu'
     2.use `register_function`
     3.launch it with serve_forever() method
     4.client access the service: create a ServerProxy instance
+    
+11.7 Communicating simply between interpreters.
+    you are running multiple instance of the python interpreter, possibly on different machines,
+    you want to exchange data between them using messages.
+    
+    multiprocessing.connection (Client and Listener).
+        use `send` and `recv` passing messages.
+        Object is serialized using `pickle`.
+    Create a connection use three forms:
+        Networking, Unix domain socket, Windows named pipes.
+        
+    Best suited for long-running connection(not a large number of short connection)
 """
