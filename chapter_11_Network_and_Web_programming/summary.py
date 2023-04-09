@@ -93,4 +93,22 @@ __author__ = 'Frankie Fu'
         Networking, Unix domain socket, Windows named pipes.
         
     Best suited for long-running connection(not a large number of short connection)
+    
+18.8 Implementing Remote Procedure Call
+    You want to implement simple remote procedure call on top of the message passing layer,
+    such as sockets, multiprocessing connections, ZeroMQ.
+    
+    Serialize data by Encoding function name, arguments and returned value using (pickle, JSON, XML, etc.)
+    
+    1. RPC flow.
+        client use proxy create a tuple that contains function name, arguments, 
+        and pickle tuple, send over the connection.
+        
+        sever received message, unpickle, look up function, and execute it with arguments, 
+        pickle result and sent it back.
+    2. Security
+        Allow RPC access only be internally, behind a firewall, and not exposed to the rest of the world.
+    3. Exception handle.
+        If using pickle, exception instance can often be serialized and reraised in the client.
+        Some other approach, at the least, return the exception string in the response.
 """
