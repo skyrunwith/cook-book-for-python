@@ -94,7 +94,7 @@ __author__ = 'Frankie Fu'
         
     Best suited for long-running connection(not a large number of short connection)
     
-18.8 Implementing Remote Procedure Call
+11.8 Implementing Remote Procedure Call
     You want to implement simple remote procedure call on top of the message passing layer,
     such as sockets, multiprocessing connections, ZeroMQ.
     
@@ -111,4 +111,18 @@ __author__ = 'Frankie Fu'
     3. Exception handle.
         If using pickle, exception instance can often be serialized and reraised in the client.
         Some other approach, at the least, return the exception string in the response.
+        
+11.9 Authenticating clients simply
+    You want a simple way to authenticate clients connecting to the server in a distributed system, 
+    but you don't want the complexity of something like SSL.
+    
+    Simple but effective authentication can be performed by implementing `a connection handshake` use `hmac`.
+    handshake flow: 
+        client connect -> server accept -> server send auth message -> client generate message digest and send to server
+        -> server recv and compare -> start communication
+    client authentication:
+        sock.recv -> generate digest -> send
+    server authentication:
+        generate message -> send -> digest and recv -> compare
+    After Authentication a connection, subsequent communication on a connection sent in the clear.
 """
