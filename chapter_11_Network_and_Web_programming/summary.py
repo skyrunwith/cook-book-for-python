@@ -147,5 +147,20 @@ __author__ = 'Frankie Fu'
         4. SSL verify both directions.
         
     如果server add SSL, 那么server create private key and certificate file. 并将certificate file放到client machine。
-    如果是Public servers，还需要从certificate authorities 获取signed certificate.        
+    如果是Public servers，还需要从certificate authorities 获取signed certificate.  
+
+11.11 Passing a Socket File Descriptor between Processes.
+    You have multiple python interpreter processes running and want to pass an open file descriptor from one to another.
+    For instance, Perhaps there is a server process that is responsible for receiving connections, but the actual
+    service of clients is to be handled by different interpreters.
+    
+    1. First, connect the server together.
+        1.1 Use Pipe object(a `Unix domain socket` or `named pipe`).
+    2. Once connection is established, Use multiprocessing.reduction: send_handle(), recv_handle()
+    
+    3. The `send_handle()` and `recv_handle()` functions as shown in the solution really only 
+       work with multiprocessing connections.
+        3.1 Use Listener and Client in `multiprocessing.connection` module. As long as you use `Unix domain socket`
+            or `named pipe`
+    4. Passing a socket file descriptor involves creating a Unix domain socket and use the `sendmsg` method of sockets.
 """
