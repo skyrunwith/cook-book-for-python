@@ -125,4 +125,27 @@ __author__ = 'Frankie Fu'
     server authentication:
         generate message -> send -> digest and recv -> compare
     After Authentication a connection, subsequent communication on a connection sent in the clear.
+11.10 Add SSL to Network Services.
+    You want to implement a network service involving sockets where servers and clients authenticate themselves
+    and encrypt transmitted data Using SSL.
+    
+    The `ssl` module support for adding SSL to low-level socket connections.
+        ssl.wrap_socket().
+    
+    Add ssl support for existing network services already implemented in the Standard Library. such as XML-RPC server.
+        1. Define a mixin class: 
+        class SSLMixin():
+            ...
+            1.1 override a get_request() method.
+            1.2 get client socket by supper().get_request() method.
+            1.3 use ssl.wrap_socket to wrap client socket
+        2. Define a server inherit from mixin class.
+            class SSLSimpleXMLRPCServer(SSLMixin, SimpleXMLRPCServer) 
+            ...
+        3. Define a class inherit `SafeTransport` class:
+            3.1 __init__ pass `SSLContext` to supper() SafeTransport
+        4. SSL verify both directions.
+        
+    如果server add SSL, 那么server create private key and certificate file. 并将certificate file放到client machine。
+    如果是Public servers，还需要从certificate authorities 获取signed certificate.        
 """
